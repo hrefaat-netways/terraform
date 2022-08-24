@@ -12,7 +12,7 @@ pool:
 steps:
 - task: AzureCLI@2
   inputs:
-    azureSubscription: Microsoft Azure Sponsorship(e9c6df82-43a6-4361-8b5c-cd513685057e)
+    azureSubscription: mysvc
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'echo yaaaaaaaaaaaaaaay'

@@ -10,18 +10,38 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CmdLine@2
+- task: AzureCLI@2
   inputs:
-    # script: 'echo Write your commands here.' 
-    workingDirectory: TERRAFORM/EIP/compute/aks
-    failOnStderr: true
-    # script: 'echo Write your commands here.' 
-    script: |
-      echo go to targted module
-      terraform init
-      ls
+    azureSubscription: Microsoft Azure Sponsorship(e9c6df82-43a6-4361-8b5c-cd513685057e)
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'echo yaaaaaaaaaaaaaaay'
 
-# - script: echo Hello, world!
+# - task: CmdLine@2
+#   inputs:
+#     # script: 'echo Write your commands here.' 
+#     workingDirectory: TERRAFORM/EIP/compute/aks
+#     failOnStderr: true
+#     # azureSubscription: 
+#     # script: 'echo Write your commands here.' 
+#     script: |
+#       echo go to targted module
+#       terraform init
+#       ls
+
+# - task: CmdLine@2
+#   inputs:
+#     # script: 'echo Write your commands here.' 
+#     workingDirectory: TERRAFORM/EIP/compute/aks
+#     failOnStderr: true
+#     # azureSubscription: 
+#     # script: 'echo Write your commands here.' 
+#     script: |
+#       echo go to targted module
+#       terraform init
+#       ls
+
+# - script: 
 #   displayName: 'Run a one-line script'
 
 # - script: |

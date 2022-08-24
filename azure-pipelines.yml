@@ -10,13 +10,24 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: CmdLine@2
+  inputs:
+    # script: 'echo Write your commands here.' 
+    workingDirectory: TERRAFORM/EIP/compute/aks
+    # script: 'echo Write your commands here.' 
+    script: |
+      echo go to targted module
+      cd TERRAFORM/EIP/compute/aks
+      # terraform init
+      ls
 
-- script: |
-    echo go to targted module
-    cd TERRAFORM/EIP/compute/aks
-    terraform init
-    ls
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+# - script: echo Hello, world!
+#   displayName: 'Run a one-line script'
+
+# - script: |
+#     echo go to targted module
+#     cd TERRAFORM/EIP/compute/aks
+#     terraform init
+#     ls
+#     echo See https://aka.ms/yaml
+#   displayName: 'Run a multi-line script'

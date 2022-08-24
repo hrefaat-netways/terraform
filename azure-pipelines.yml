@@ -15,7 +15,9 @@ steps:
     azureSubscription: mysvc
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'echo yaaaaaaaaaaaaaaay'
+    inlineScript: |
+      echo go to targted module
+      echo oh rererererereererereerreer
 
 - task: CmdLine@2
   inputs:

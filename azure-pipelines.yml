@@ -17,17 +17,17 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: 'echo yaaaaaaaaaaaaaaay'
 
-# - task: CmdLine@2
-#   inputs:
-#     # script: 'echo Write your commands here.' 
-#     workingDirectory: TERRAFORM/EIP/compute/aks
-#     failOnStderr: true
-#     # azureSubscription: 
-#     # script: 'echo Write your commands here.' 
-#     script: |
-#       echo go to targted module
-#       terraform init
-#       ls
+- task: CmdLine@2
+  inputs:
+    # script: 'echo Write your commands here.' 
+    workingDirectory: TERRAFORM/EIP/compute/aks
+    failOnStderr: true
+    # azureSubscription: 
+    # script: 'echo Write your commands here.' 
+    script: |
+      echo go to targted module
+      terraform init
+      ls
 
 # - task: CmdLine@2
 #   inputs:

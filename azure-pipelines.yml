@@ -29,6 +29,7 @@ steps:
       # azureSubscription: 
       # script: 'echo Write your commands here.' 
       script: |
+        az login --service-principal -u b38f6df6-9da9-4c8c-92a1-65bddac48414 -p oxo8Q~7QHDpkrjYnbKQmzXf8FB4fZQIzUGp4Zbhx --tenant 2ab2b5d0-18af-4aa0-9010-cb69d0c7b92f
         terraform init
 
 # - task: CmdLine@2

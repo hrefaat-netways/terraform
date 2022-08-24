@@ -17,8 +17,7 @@ steps:
     # script: 'echo Write your commands here.' 
     script: |
       echo go to targted module
-      #cd TERRAFORM/EIP/compute/aks
-      # terraform init
+      terraform init
       ls
 
 # - script: echo Hello, world!

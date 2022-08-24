@@ -1,0 +1,10 @@
+eip.dev:
+  envionment: dev
+  public-ips:
+      eip-dev-app-gateway-ip:
+          resource_group_name: Azure-Internal-RD-6202
+          sku:    Standard
+          allocation_method:    Static
+
+
+

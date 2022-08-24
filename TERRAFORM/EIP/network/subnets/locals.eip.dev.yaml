@@ -1,0 +1,15 @@
+eip.dev:
+  envionment: dev
+  subnets:
+      eip-dev-app-gateway-subnets:
+          resource_group_name: Azure-Internal-RD-6202
+          virtual_network_name: eip-dev-app-gateway-virtualnetwork
+          cidr: 
+             - 192.168.1.0/24
+      eip-dev-aks-subnets:
+          resource_group_name: Azure-Internal-RD-6202
+          virtual_network_name: eip-dev-aks-virtualnetwork
+          cidr: 
+             - 10.224.0.0/16
+
+#

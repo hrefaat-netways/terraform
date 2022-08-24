@@ -1,0 +1,7 @@
+eip.dev:
+  envionment: dev
+  peerings:
+      aks-appgateway-peerings:
+          resource_group_name: Azure-Internal-RD-6202
+          vnet_name_1: eip-dev-aks-virtualnetwork
+          vnet_name_2: eip-dev-app-gateway-virtualnetwork

@@ -1,0 +1,13 @@
+eip.dev:
+  envionment: dev
+  aks:
+    clusters:
+      eip-dev-adx:
+          node_resource_group_name: eip-stg-aks-nrg
+          dns_prefix:    eip-stg-adx
+          data_pool_name:    eipdatapool
+          vm_system_size:    Standard_D2_v2
+          vm_data_size:      Standard_D2_v2
+          data_node_vnet:    eip-dev-aks-virtualnetwork
+          data_node_subnet:  eip-dev-aks-subnets
+          data_node_count:   3

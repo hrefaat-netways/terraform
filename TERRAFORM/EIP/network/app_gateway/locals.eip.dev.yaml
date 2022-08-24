@@ -1,0 +1,9 @@
+eip.dev:
+  app_gateway:
+      eip-dev-app-gateway:
+          resource_group_name: Azure-Internal-RD-6202
+          public_ip_name: eip-dev-app-gateway-ip
+          subnet_name: eip-dev-app-gateway-subnets
+          virtual_network_name: eip-dev-app-gateway-virtualnetwork
+          environment: stg
+          private_ip_address: 192.168.1.9

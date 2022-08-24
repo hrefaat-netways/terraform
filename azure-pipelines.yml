@@ -32,6 +32,7 @@ steps:
       # azureSubscription: 
       # script: 'echo Write your commands here.' 
       script: |
+        az logout
         export ARM_CLIENT_ID="b38f6df6-9da9-4c8c-92a1-65bddac48414"
         export ARM_CLIENT_SECRET="oxo8Q~7QHDpkrjYnbKQmzXf8FB4fZQIzUGp4Zbhx"
         export ARM_SUBSCRIPTION_ID="e9c6df82-43a6-4361-8b5c-cd513685057e"

@@ -39,7 +39,7 @@ steps:
         export ARM_TENANT_ID="2ab2b5d0-18af-4aa0-9010-cb69d0c7b92f"
         terraform init
         terraform workspace select eip.dev
-        terraform plan
+        terraform destroy
 
 
 

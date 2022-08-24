@@ -15,21 +15,22 @@ steps:
     azureSubscription: mysvc
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: |
-      echo go to targted module
-      echo oh rererererereererereerreer
-
-- task: CmdLine@2
-  inputs:
-    # script: 'echo Write your commands here.' 
     workingDirectory: TERRAFORM/EIP/compute/aks
-    failOnStderr: true
-    # azureSubscription: 
-    # script: 'echo Write your commands here.' 
-    script: |
-      echo go to targted module
+    failOnStandardError: true
+    inlineScript: |
+      echo running terraform init
       terraform init
-      ls
+
+# - task: CmdLine@2
+#   inputs:
+#     # script: 'echo Write your commands here.' 
+#     workingDirectory: TERRAFORM/EIP/compute/aks
+#     failOnStderr: true
+#     # azureSubscription: 
+#     # script: 'echo Write your commands here.' 
+#     script: |
+#       echo go to targted module
+#       ls
 
 # - task: CmdLine@2
 #   inputs:

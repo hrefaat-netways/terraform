@@ -18,7 +18,7 @@ steps:
       # azureSubscription: 
       # script: 'echo Write your commands here.' 
       script: |
-        export ARM_CLIENT_ID="${{ eip-terraform-dev.ARM_CLIENT_ID }}"
+        export ARM_CLIENT_ID="$[eip-terraform-dev.ARM_CLIENT_ID]"
         echo  "${{ eip-terraform-dev.ARM_CLIENT_ID }}"
         echo  "rerererererererererererererreerererererererererreer"
         export ARM_CLIENT_SECRET="Uc-8Q~AMMSmQKj5AJYaRIcKDEYwoPmRywpWjBcBr"

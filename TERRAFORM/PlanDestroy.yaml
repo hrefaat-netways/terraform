@@ -1,5 +1,6 @@
 
-
+variables:
+- group: eip-terraform-dev
 
 trigger:
 - none
@@ -18,8 +19,8 @@ steps:
       # azureSubscription: 
       # script: 'echo Write your commands here.' 
       script: |
-        export ARM_CLIENT_ID="$[eip-terraform-dev.ARM_CLIENT_ID]"
-        echo  "${{ eip-terraform-dev.ARM_CLIENT_ID }}"
+        export ARM_CLIENT_ID="$(ARM_CLIENT_ID)"
+        echo  "$(ARM_CLIENT_ID)"
         echo  "rerererererererererererererreerererererererererreer"
         export ARM_CLIENT_SECRET="Uc-8Q~AMMSmQKj5AJYaRIcKDEYwoPmRywpWjBcBr"
         export ARM_SUBSCRIPTION_ID="e9c6df82-43a6-4361-8b5c-cd513685057e"

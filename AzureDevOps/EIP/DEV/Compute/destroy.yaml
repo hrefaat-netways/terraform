@@ -24,4 +24,4 @@ steps:
         export ARM_TENANT_ID="$(ARM_TENANT_ID)"
         terraform init
         terraform workspace select eip.dev
-        terraform plan -destroy
+        terraform apply -auto-approve

@@ -25,6 +25,7 @@ steps:
 
 
   - task: CmdLine@2
+    displayName: terraform paln
     inputs:
       # script: 'echo Write your commands here.' 
       workingDirectory: TERRAFORM/EIP/compute/aks

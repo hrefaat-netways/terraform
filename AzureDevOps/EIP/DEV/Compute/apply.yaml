@@ -1,4 +1,3 @@
-
 variables:
 - group: eip-terraform-dev
 
@@ -11,7 +10,7 @@ pool:
 steps:
 
   - task: CmdLine@2
-    displayName: terraform paln destroy
+    displayName: terraform auto apply
     inputs:
       # script: 'echo Write your commands here.' 
       workingDirectory: TERRAFORM/EIP/compute/aks
@@ -20,11 +19,9 @@ steps:
       # script: 'echo Write your commands here.' 
       script: |
         export ARM_CLIENT_ID="$(ARM_CLIENT_ID)"
-        echo  "$(ARM_CLIENT_ID)"
-        echo  "rerererererererererererererreerererererererererreer"
-        export ARM_CLIENT_SECRET="Uc-8Q~AMMSmQKj5AJYaRIcKDEYwoPmRywpWjBcBr"
-        export ARM_SUBSCRIPTION_ID="e9c6df82-43a6-4361-8b5c-cd513685057e"
-        export ARM_TENANT_ID="2ab2b5d0-18af-4aa0-9010-cb69d0c7b92f"
+        export ARM_CLIENT_SECRET="$(ARM_CLIENT_SECRET)"
+        export ARM_SUBSCRIPTION_ID="$(ARM_SUBSCRIPTION_ID)"
+        export ARM_TENANT_ID="$(ARM_TENANT_ID)"
         terraform init
         terraform workspace select eip.dev
-        terraform plan -destroy
+        terraform apply -auto-approve

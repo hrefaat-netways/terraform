@@ -1,0 +1,27 @@
+variables:
+- group: eip-terraform-dev
+
+trigger:
+- none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+  - task: CmdLine@2
+    displayName: terraform auto destroy
+    inputs:
+      # script: 'echo Write your commands here.' 
+      workingDirectory: TERRAFORM/EIP/compute/aks
+      failOnStderr: true
+      # azureSubscription: 
+      # script: 'echo Write your commands here.' 
+      script: |
+        export ARM_CLIENT_ID="$(ARM_CLIENT_ID)"
+        export ARM_CLIENT_SECRET="$(ARM_CLIENT_SECRET)"
+        export ARM_SUBSCRIPTION_ID="$(ARM_SUBSCRIPTION_ID)"
+        export ARM_TENANT_ID="$(ARM_TENANT_ID)"
+        terraform init
+        terraform workspace select eip.dev
+        terraform plan -destroy

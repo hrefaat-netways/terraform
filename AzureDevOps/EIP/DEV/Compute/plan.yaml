@@ -13,7 +13,7 @@ steps:
     displayName: terraform paln 
     inputs:
       # script: 'echo Write your commands here.' 
-      workingDirectory: TERRAFORM/EIP/compute/aks
+      workingDirectory: TERRAFORM/EIP/network/virtualnetwork
       failOnStderr: true
       # azureSubscription: 
       # script: 'echo Write your commands here.' 

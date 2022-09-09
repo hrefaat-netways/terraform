@@ -23,5 +23,5 @@ steps:
         export ARM_SUBSCRIPTION_ID="$(ARM_SUBSCRIPTION_ID)"
         export ARM_TENANT_ID="$(ARM_TENANT_ID)"
         terraform init
-        terraform workspace select eip.dev
-        terraform plan
+        # terraform workspace select eip.dev
+        # terraform plan

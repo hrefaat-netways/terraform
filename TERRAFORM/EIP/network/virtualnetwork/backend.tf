@@ -1,8 +1,8 @@
 # Configure Terraform State Storage
 terraform {
   backend "azurerm" {
-    resource_group_name  = "Azure-Internal-RD-6202"
-    storage_account_name = "tfstorage16072022"
+    resource_group_name  = "rg-adxdev-eip_sandbox-uaen-001"
+    storage_account_name = "teraformadx"
     container_name       = "tfsate"
     key                  = "network.terraform.tfstate"
   }

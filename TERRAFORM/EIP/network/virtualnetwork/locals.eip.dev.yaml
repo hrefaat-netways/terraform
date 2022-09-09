@@ -2,11 +2,11 @@ eip.dev:
   envionment: dev
   virtual-networks:
       eip-dev-app-gateway-virtualnetwork:
-          resource_group_name: Azure-Internal-RD-6202
+          resource_group_name: rg-adxdev-eip_sandbox-uaen-001
           cidr: 
              - 192.168.0.0/16
       eip-dev-aks-virtualnetwork:
-          resource_group_name: Azure-Internal-RD-6202
+          resource_group_name: rg-adxdev-eip_sandbox-uaen-001
           cidr: 
              - 10.224.0.0/12
 
